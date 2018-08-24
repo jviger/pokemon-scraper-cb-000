@@ -39,17 +39,17 @@ describe "Pokemon" do
       expect(pikachu_from_db.type).to eq("electric")
     end
   end
+=begin
+  describe "BONUS" do
 
-#  describe "BONUS" do
+    before do
+      @sql_runner.execute_create_hp_column
+      Pokemon.save('Pikachu', 'electric', @db)
+      Pokemon.save('Magikarp', 'water', @db)
+    end
 
- #   before do
-  #    @sql_runner.execute_create_hp_column
-  #    Pokemon.save('Pikachu', 'electric', @db)
-  #    Pokemon.save('Magikarp', 'water', @db)
-  #  end
-
-  #  let(:pikachu){Pokemon.find(1, @db)}
-  #  let(:magikarp){Pokemon.find(2, @db)}
+    let(:pikachu){Pokemon.find(1, @db)}
+    let(:magikarp){Pokemon.find(2, @db)}
 
     # remove the 'x' before 'it' to run these tests
     xit "knows that a pokemon have a default hp of 60" do
@@ -72,3 +72,4 @@ describe "Pokemon" do
     end
   end
 end
+=end
